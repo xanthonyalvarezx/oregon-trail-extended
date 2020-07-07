@@ -15,3 +15,25 @@ juan.eat() // Juan has run out of food!
 console.log(juan)
 console.log(`Wagon Should Quarantine?: ${ wagon.shouldQuarantine() } – EXPECTED: true. Juan has run out of food and become unhealthy!`)
 console.log(`Wagon's Total Food?: ${ wagon.totalFood() } – EXPECTED: 3.`)
+
+const main = document.querySelector('main')
+let currentTravelers = document.createElement('div')
+currentTravelers.id = 'wagon1'
+main.append(currentTravelers)
+currentTravelers.append(JSON.stringify(juan),' ', JSON.stringify(maude),' ', JSON.stringify(henrietta))
+
+let seats = document.createElement('div')
+seats.id = 'wagonCapacity'
+seats.append('Seats available:',' ', wagon.getAvailableSeatCount())
+main.append(seats)
+
+let food = document.createElement('div')
+food.id = 'totalFood'
+food.append('Total food :',' ', wagon.totalFood())
+main.append(food)
+
+let quarentine = document.createElement('div')
+quarentine.id = 'shouldQuarentine'
+quarentine.append('shouldQuarentine:',' ', wagon.shouldQuarantine())
+main.append(quarentine)
+
