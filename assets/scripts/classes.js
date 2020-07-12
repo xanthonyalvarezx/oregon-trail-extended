@@ -53,16 +53,10 @@ class Wagon {
     totalFood(){
         let foodSum = this.passengers.reduce((sum, traveler) => {
             let result = sum + traveler.food
-            console.log({result})
-            
-            return result
+           console.log(result)
         }, 0)
-        
-        }
-        
-        
-      
-        
+        return foodSum
         
     }
+}
 
