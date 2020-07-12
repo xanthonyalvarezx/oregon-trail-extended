@@ -6,7 +6,7 @@ class Traveler {
     }
     hunt() {
         this.food += 2
-
+ 
     }
     eat() {
         if (this.food > 0) {
@@ -49,9 +49,20 @@ class Wagon {
         let quarentine = this.passengers.some(traveler => traveler.isHealthy === false)
         return quarentine
     }
-    totalFood() {
-        let allFood = this.passengers.reduce(traveler => traveler.food)
-        return allFood
 
+    totalFood(){
+        let foodSum = this.passengers.reduce((sum, traveler) => {
+            let result = sum + traveler.food
+            console.log({result})
+            
+            return result
+        }, 0)
+        
+        }
+        
+        
+      
+        
+        
     }
-}
+

@@ -37,3 +37,16 @@ quarentine.id = 'shouldQuarentine'
 quarentine.append('shouldQuarentine:',' ', wagon.shouldQuarantine())
 main.append(quarentine)
 
+
+const eating = document.querySelector('#eat')
+const hunting = document.querySelector('#hunt')
+
+hunting.addEventListener('click', function(){
+hunt()
+console.log('I hunt')
+})
+eating.addEventListener('click', function(){
+eat()
+console.log('I eat')
+})
+
