@@ -1,3 +1,4 @@
+
 class Traveler {
     constructor(name, food = 1, isHealthy = true) {
         this.name = name
@@ -9,13 +10,14 @@ class Traveler {
  
     }
     eat() {
+        
         if (this.food > 0) {
             this.food -= 1
         } else {
             this.isHealthy = false
-        }
+            }
+        
     }
-
 }
 ////////////  wagon //////////////
 
@@ -48,15 +50,17 @@ class Wagon {
     shouldQuarantine() {
         let quarentine = this.passengers.some(traveler => traveler.isHealthy === false)
         return quarentine
+
+
     }
 
     totalFood(){
         let foodSum = this.passengers.reduce((sum, traveler) => {
             let result = sum + traveler.food
-           console.log(result)
-        }, 0)
+            console.log(result)
+            return result
+        },0)
         return foodSum
-        
     }
 }
 

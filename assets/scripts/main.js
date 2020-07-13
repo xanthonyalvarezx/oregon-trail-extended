@@ -40,13 +40,7 @@ main.append(quarentine)
 
 const eating = document.querySelector('#eat')
 const hunting = document.querySelector('#hunt')
-
-hunting.addEventListener('click', function(){
-hunt()
-console.log('I hunt')
-})
-eating.addEventListener('click', function(){
-eat()
-console.log('I eat')
-})
+const shouldQuarentine = document.querySelector('#shouldQuarentine')
+const addTraveler = document.querySelector('#addTraveler')
+const travelerName = document.querySelector('#travelerName')
 
